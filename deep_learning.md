@@ -121,7 +121,16 @@ Decision Tree Regression
  x.ndim
  ```  
  
+ 4) 3D 텐서  
+  ![image](https://user-images.githubusercontent.com/82145878/179446395-9f7ecde3-6835-42a6-a51a-380003c287ba.png)  
+  
+ 5) 고차원 텐서  
+  ![image](https://user-images.githubusercontent.com/82145878/179446487-8c6fb851-eaae-4bbd-9962-6616de11f561.png)  
+
  ![image](https://user-images.githubusercontent.com/82145878/179445779-a77c91e2-27d5-4792-8fd5-e47c180350ce.png)  
+ 
+ 
+ 
  
 
  
