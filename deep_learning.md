@@ -94,3 +94,34 @@ Decision Tree Regression
 학습에 의한 w값으로 차즈러 가는 과정  
 뭐래?  
 
+
+# 신경망을 위한 데이터 표현  
+1) 스칼라(0D 텐서)  
+ - 넘파이에서 float32나 float64 타입의 숫자가 스칼라 텐서  
+ ```python
+ import numpy as np  
+ x = np.array(12)  
+ x 
+ x.ndim
+ ```  
+ 
+2) 벡터(1D 텐서) 
+ ```python
+ x = np.array([12,3,6,14,7])
+ x
+ x.ndim
+ ```  
+ 
+3) 행렬(2D 텐서)  
+ ```python
+ x = np.array([[5, 78, 2, 34, 0],
+             [6, 79, 3, 35, 1], 
+              [7, 80, 4, 36, 2]])
+ x
+ x.ndim
+ ```  
+ 
+ ![image](https://user-images.githubusercontent.com/82145878/179445779-a77c91e2-27d5-4792-8fd5-e47c180350ce.png)  
+ 
+
+ 
