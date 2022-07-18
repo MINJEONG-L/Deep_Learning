@@ -130,6 +130,9 @@ Decision Tree Regression
  ![image](https://user-images.githubusercontent.com/82145878/179445779-a77c91e2-27d5-4792-8fd5-e47c180350ce.png)  
  
  
+ 로지스틱회귀-ㅅ그모이드 함수  
+ 
+ 
  
  
 
