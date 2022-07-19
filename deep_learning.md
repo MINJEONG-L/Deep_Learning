@@ -134,6 +134,21 @@ Decision Tree Regression
  
  
  
+ # Back propagation  
  
+ 
+ ![image](https://user-images.githubusercontent.com/82145878/179665255-d50a2240-59ad-4de5-aaff-402e3880a1db.png)  
+ 
+ 경사하강법의 momentum  : 로컬미니멈에서 빠져나와 글로벌 미니멈으로 갈 수 잇게해줌  
+ Adam 쓰자
+ tf.keras.optimizers.Adam(...)  
+ 
+ 
+ 연속적인 값 - 회귀
+ 이진분류 가능한것 - 분류
+ 
+ 
+ 
+
 
  
