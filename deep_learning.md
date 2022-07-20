@@ -200,7 +200,32 @@ Greedy Layer Wise Training
   sgd = optiizers.SGD(lr=0.01)
   model.compile(optimizer = sgd, loss = 'mse', metrics = ['mse'])
   hist = model.fit(X,y,epochs = 300)   #층 쌓는 것 외에 compile, fit은 다 동일 
-  ```  
+  ```    
+  
+  ![image](https://user-images.githubusercontent.com/82145878/179901106-2c54ca30-0a51-48bd-9ebc-e5adcd356e70.png)  
+  ```python
+  from tensorflow.keras.models import Model
+  from tensorflow.keras.layers import Input, Dense, concatenate
+  
+  inputa = Input(shape = (2,))
+  inputb = Input(shape = (4,))
+  
+  x = Dense(4, activation='relu')(inputa)
+  x = Dense(2,activation='relu')(x)
+  x = Model(inputs = inputa, outputs = x)
+  y = Dense(4,activation='relu')(inputb)
+  y = Dense(2,activation = 'relu')(y)
+  y = Dense(2,activation='relu')(y)
+  y = Model(inputs= inputb, outputs = y)
+  result = concatenate([x.output, y.output])
+  z = Dense(2,activation='relu')(result)
+  z = Dense(1, activation='linear')(z)
+
+  model = Model(inputs=[x.input, y.input], outputs = z)#실제 모델의 시작을 적어줘야함 
+```  
+![image](https://user-images.githubusercontent.com/82145878/179901275-7e9ea52a-b5a7-41bd-b826-dd5581375897.png)  
+
+  
   
   
  
