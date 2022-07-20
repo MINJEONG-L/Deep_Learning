@@ -270,3 +270,8 @@ model.add(LayerNormalization())  <== RNN
 - weight의 수를 줄인다 : 노드, 레이어의 수를 데이터셋에 비해 많이 했을 때 (학습 good 예측 bad ==> 노드 수 줄이기)  **늘린다고 성능 무조건 좋아지는 것 x**  
 - Regularization 적용  : L1, L2, l1+l2  (머신러닝 회귀에서 사용햇던것처럼)  
 - dropout
+
+
+![image](https://user-images.githubusercontent.com/82145878/179926605-60b72664-77f2-443b-8f69-f17219e2a8a1.png)  
+
+  
