@@ -225,7 +225,42 @@ Greedy Layer Wise Training
 ```  
 ![image](https://user-images.githubusercontent.com/82145878/179901275-7e9ea52a-b5a7-41bd-b826-dd5581375897.png)  
 
+![image](https://user-images.githubusercontent.com/82145878/179901935-f6f9a2d5-f110-4225-8800-9b5581db32a2.png)  
+
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/82145878/179904906-5123b259-5a3f-4389-9eb5-4b670d80110a.png)  
+
+# Xavier Initialization  
+w = np.random.randn(n_input, n_output) / sqar(n_input)
+n_input  인풋노드의 개수
+n_output 아웃풋노드의 개수 
+
+
+
+
   
   
   
- 
+한번 경사하강을 할때마다 얼마나 경사하강 할 것인지 learing rate 클수록 팍팍 빨리내려감 0을 못찾고 내려갈 수도잇어서 
+좀 줄임
+
+그런데 배치 정규화는 좀 상관없음 
+학습ㅎㄹ때마다 정규분포가 틀어져잇다가 학습하면 맞추고 학습하면 맞추고 
+자체적으로 커버가 되서 안정적으로 모델을 만들수 잇다  
+
+BN + SIGMOID OR TANH ==> OAY GOOD
+==> learning rate 를 높일 수 잇고 속도를 높일 수 잇다  
+실제로 predict 할때 레이어는 빼야함  
+학습을 위한 것임  
+그리고 BN는 구조땜에 not for RNN
+배치가 들어오는 대로 웨이트를 계싼하는 것이 안맞음  
+분포가 많은 거을 가지고 평균, 분ㅅㄴㅇㄹ 내야지 
+RNN에서는 Layer Nomalization 을 한다  
+
+model.add(BatchNomalization())
+model.add(LayerNormalization())  <== RNN  
+
