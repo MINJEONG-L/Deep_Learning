@@ -179,7 +179,28 @@ weight초기화에서 문제가 있었던 것
 Greedy Layer Wise Training  
 
  
- 
-
-
+ VQA
+ * functionaL API란?  
+  - 중급, 고급  
+  - 각 레이어를 함수로서 정의  
+  - 반드시 입력층을 정의   
+  - sequential API (초급)은 여러 층을 공유하거나 다양한 종류의 입력과 출력을 사용  
+  ```python
+  from tensorflow.keras import optimizers
+  from tensorflow.keras.models import Model
+  from tensorflow.keras.layers import Input, Dense
+  import tensorflow as tf 
+  
+  inputs = Input(shape=(10,))
+  hidden1 = Dense(16, activation='relu')(inputs)
+  hidden2 = Dense(16, activation='relu')(hidden1)
+  output = Dense(1, activation='sigmoid')(hidden2)
+  model = Model(inputs = inputs, outputs = output)
+  #functional 사용이라면 병렬로 사용한다는 것 
+  sgd = optiizers.SGD(lr=0.01)
+  model.compile(optimizer = sgd, loss = 'mse', metrics = ['mse'])
+  hist = model.fit(X,y,epochs = 300)   #층 쌓는 것 외에 compile, fit은 다 동일 
+  ```  
+  
+  
  
