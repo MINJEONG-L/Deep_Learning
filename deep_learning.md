@@ -264,3 +264,9 @@ RNN에서는 Layer Nomalization 을 한다
 model.add(BatchNomalization())
 model.add(LayerNormalization())  <== RNN  
 
+
+과적합 방지
+- 데이터 양을 늘린다 : 추가수집, 증식, augmentation, bak Traslation 등
+- weight의 수를 줄인다 : 노드, 레이어의 수를 데이터셋에 비해 많이 했을 때 (학습 good 예측 bad ==> 노드 수 줄이기)  **늘린다고 성능 무조건 좋아지는 것 x**  
+- Regularization 적용  : L1, L2, l1+l2  (머신러닝 회귀에서 사용햇던것처럼)  
+- dropout
