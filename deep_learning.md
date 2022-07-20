@@ -145,8 +145,39 @@ Decision Tree Regression
  
  
  연속적인 값 - 회귀
- 이진분류 가능한것 - 분류
+ 이진분류 가능한것 - 분류  
  
+ 
+ 
+ 
+ 딥러닝에서 활성화함수를 꼭 써야하는 이유  
+  - 중간 레이어의 역할이 없음  
+  - 즉 딥러닝이 없는 것과 같음  
+
+
+활성화함수  
+- 활성화함수는 출력값을 결정하는 함수  
+- 비선형 함수여야한다 : 비선형층  
+- 중간층==은닉층==히든레이어층만 활성화함수를 쓰고있긴 한데
+- 인풋레이어가 아닌데도 안쓰는 거 Flatten dropout callback embedding(선형) 층 등등...  
+- 자연어 의 임베딩층은 선형층  
+- 최초의 활성화함수 : step function  
+- 이게 다듬어 진게 시그모이드  
+- relu function, leaky relu function  
+- 죽은 렐루 : 0 이 되면 경사가 없어지니까.. 문제가 됨 0은 좀 쓰지말자 해서 양수는 가지고 ㄱ나ㅡㄴ데 음수를 기울기를 살짝 준거 0.01 정도 (음수로 들어왔을때 0이 아니라 저정도 기울기를 줌)  
+- 이진분류 : sigmoid 다중분류 : softmax
+- gradient vanishing  -> activation='relu' 
+- gradient exploding  -> gradient clipping for rnn 기울기 값을 자르는 것
+- Adam = optimizers.Adam(lr=0.0001,clipnorm = 1)  
+- from tensorflow.keras import optimizers  
+
+왜 돌릴때마다 성능, 학습속도가 다를까? random 한 파라미터
+weight초기화에서 문제가 있었던 것  
+랜덤하게 준 웨이트가 0이면 업데이트를 할 수 없고 똑같은 웨이트를 줘도 업데이트가 같아서 안댐  
+
+
+Greedy Layer Wise Training  
+
  
  
 
