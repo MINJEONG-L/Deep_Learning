@@ -52,3 +52,47 @@ Conv2D 에 이미지 shape 맞춰서 넣어주기
 그다음 개수  
 
 가로세로를 조합한게 
+
+
+
+![image](https://user-images.githubusercontent.com/82145878/180110985-95be896d-7bf9-44a2-ba70-2116867e504e.png)  
+activation = 'relu' 주로 사용  
+xavier .....
+bias initializer = 초기 절편 0  
+![image](https://user-images.githubusercontent.com/82145878/180111116-2d4160bb-fb6c-4703-a8d9-76742519cc6d.png)  
+padding 디폴트가 valid 이고 안한다는 뜻 한다는거면 same  
+
+
+padding = 'same'  은 stride 값을 따라간다  
+
+1,1,3,3==> [[1,2,3],[4,5,6]...가능 채널 라스트  
+
+  
+ Convolution 은 CNN에서 기본으로 해야하고 하면 조각족ㄱ이 나옴  
+# pooling  
+ Max Pooling or AveragePooling  
+  ![image](https://user-images.githubusercontent.com/82145878/180114730-c6aa56f2-4337-4086-8d06-836d58f0cbf4.png)  
+ Max Pooling -> weight 없음  제일 큰 값이 돌출값  
+ 돌출값을 추출해놓음  
+ 사이즈를 줄이면서 특성만 뽑아내니까 좋음 --> 연산량 줄여줌  
+ ![image](https://user-images.githubusercontent.com/82145878/180114781-818e1936-0e32-4468-98be-3fabd22a6df5.png)  
+
+ AveragePooling - > 돌출값 : 평균값 
+ 이거는 이미지로 따지면 블러처리가 되는 것 
+ 이거는 특징값을 잡아내기가 좀 힘들음   
+ ![image](https://user-images.githubusercontent.com/82145878/180114819-c0956d44-fd5d-439f-a870-7e3030a13495.png)  
+ **기본적으로는 겹치지 않게 풀링을 한다**  
+ 
+ 
+ ## CNN Case study  
+ 1x1 Convoution 장점 3가지
+ - Channel 수 조절   
+ - 연산량 감소(Efficient)  
+ - 비선형성(Non-linearity)  
+ - 모든 픽셀에 비선형성을 주니까 잘 예측을 하더라  
+ - 
+
+ 
+
+ 
+ 
